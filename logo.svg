@@ -1,0 +1,19 @@
+<!-- Save as logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Simmons Energy Corporation logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f4c5c"/>
+      <stop offset="1" stop-color="#0b6a5f"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f6a623"/>
+      <stop offset="1" stop-color="#e37a1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="18" fill="url(#g1)"/>
+  <g transform="translate(20,20)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 64 L36 24 L60 64" stroke="url(#g2)" stroke-width="6"/>
+    <rect x="6" y="60" width="48" height="10" rx="3" fill="#fff" opacity="0.06"/>
+  </g>
+  <text x="120" y="110" font-family="Inter, Arial" font-size="0" fill="none">Simmons Energy</text>
+</svg>
