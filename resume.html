@@ -7,87 +7,38 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="resume">
+    <!-- SVG sprite for icons -->
+    <svg aria-hidden="true" style="display:none">
+      <use xlink:href="#icon-mail"></use>
+    </svg>
     <div class="container resume-sheet">
       <header class="resume-header">
         <h1>Micah Scott</h1>
         <div class="contact-inline">
-          <span>📞 484-507-6217</span>
-          <span>📍 Mohrsville, PA</span>
-          <span>✉️ <a href="mailto:micahnotscottish@gmail.com">micahnotscottish@gmail.com</a></span>
+          <span class="icon contact-text"><svg width="16" height="16"><use xlink:href="#icon-phone"></use></svg> 484-507-6217</span>
+          <span class="icon"><svg width="16" height="16"><use xlink:href="#icon-location"></use></svg> Mohrsville, PA</span>
+          <span class="icon contact-text"><svg width="16" height="16"><use xlink:href="#icon-mail"></use></svg> <a href="mailto:micahnotscottish@gmail.com">micahnotscottish@gmail.com</a></span>
         </div>
         <div class="links-inline">
           <a href="https://linkedin.com/in/micahnotscottish">linkedin.com/in/micahnotscottish</a> • <a href="https://micahnotscottish.github.io/portfolio">micahnotscottish.github.io/portfolio</a>
         </div>
       </header>
 
-      <section>
-        <h2>Education</h2>
-        <p><strong>Bachelor of Science in Software Engineering</strong>, Liberty University — Anticipated May 2027<br>
-        GPA: 3.88</p>
-        <p>Relevant Coursework: Data Structures & Algorithms, Computer Architecture, Database Design, Advanced C++, Windows & Linux System Administration</p>
-        <p>Clubs: Software Development Club, Cyber Security Club</p>
+      <section class="pdf-section">
+        <div class="pdf-controls">
+          <a class="btn" href="Micah%20Scott%20Resume.pdf" download="Micah-Scott-Resume.pdf">Download PDF</a>
+          <a class="btn ghost" href="Micah%20Scott%20Resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
+        <div class="pdf-wrap">
+          <embed src="Micah%20Scott%20Resume.pdf" type="application/pdf" width="100%" height="720px" />
+          <!-- Fallback link for browsers that don't support embed -->
+          <p class="muted">If the PDF does not display, <a href="Micah%20Scott%20Resume.pdf" download>download it here</a>.</p>
+        </div>
       </section>
 
-      <section>
-        <h2>Skills</h2>
-        <p><strong>Languages:</strong> C++, C, Java, Python, JavaScript, HTML, CSS, SQL, Bash</p>
-        <p><strong>Technologies:</strong> Git, GitHub, Docker, Azure, Microsoft SQL Server, MySQL, Logisim, Unreal Engine 5, Pandas, OpenCV</p>
-      </section>
-
-      <section>
-        <h2>Experience</h2>
-        <h3>Data Annotation Tech — Project Developer & Reviewer</h3>
-        <span class="date">February 2025 — Present</span>
-        <ul>
-          <li>Led development of 25+ AI training projects focused on code and computer science domains</li>
-          <li>Defined 125+ evaluation criteria for AI-generated responses to ensure consistency and quality</li>
-          <li>Conducted peer reviews and QA audits to maintain near 100% data integrity across 75+ projects</li>
-          <li>Revised and updated 30+ projects in an active development environment to maximize data quality</li>
-          <li>Debugged and resolved issues with 25+ projects and data sets as they arose</li>
-        </ul>
-
-        <h3>Data Annotation Tech — AI Trainer</h3>
-        <span class="date">August 2024 — Present</span>
-        <ul>
-          <li>Refined 200+ AI-generated code outputs for correctness, performance, and industry standards</li>
-          <li>Converted 50+ backend API functions into JSON Schemas for AI model integration</li>
-          <li>Engineered 15+ Python utilities enabling AI models to extract data from Google Docs using Pandas</li>
-          <li>Evaluated AI-generated code diffs involving large scale repositories for accuracy and compatibility</li>
-          <li>Engineered 100+ prompts to drive AI models to failure to be documented and corrected</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Projects</h2>
-        <h3>Logisim Computer (Machine Language, 6502 Assembly)</h3>
-        <ul>
-          <li>Designed and simulated a custom 8-bit CPU architecture using electrical, logic gates, registers</li>
-          <li>Built a compatible 6502 based assembler an disassembler for low-level instruction encoding</li>
-          <li>Designed machine level programs to perform tasks under extreme architectural constraints</li>
-        </ul>
-
-        <h3>Image Detection (Python + OpenCV)</h3>
-        <ul>
-          <li>Built a visual detection program using OpenCV to interact with game elements at 95% accuracy</li>
-          <li>Integrated Windows API calls for raw mouse and keyboard input control</li>
-          <li>Demonstrated real-time feedback and adaptive gameplay based on image recognition</li>
-        </ul>
-
-        <h3>Bash Shell Extension</h3>
-        <ul>
-          <li>Created a Bash shell extension that executes arbitrary commands after each user input</li>
-          <li>Implemented self-modifying code and filesystem evasion techniques to resist deletion</li>
-        </ul>
-
-        <h3>Unreal Engine 5 Game Development (C++)</h3>
-        <ul>
-          <li>Developed several 3d multiplayer video games supporting local and online co-op</li>
-          <li>Published 2 separate titles to Steam and itch.io with integrated marketing and deployment pipelines</li>
-        </ul>
-      </section>
+      <!-- Main resume PDF viewer only. Other resume content removed to avoid duplication. -->
 
       <footer class="print-actions">
-        <a href="#" onclick="window.print();return false;" class="btn">Print / Save as PDF</a>
         <a href="index.html" class="btn ghost">Back to site</a>
       </footer>
     </div>

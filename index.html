@@ -8,6 +8,19 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   </head>
   <body>
+    <!-- SVG sprite for small icons -->
+    <svg aria-hidden="true" style="display:none">
+      <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M2 6.5v11A2.5 2.5 0 0 0 4.5 20h15a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 19.5 4h-15A2.5 2.5 0 0 0 2 6.5zm3.5-.5h11l-5.5 4.25L5.5 6z"/></symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.2a15.05 15.05 0 0 0 7.2 7.2l2.1-2.1a1 1 0 0 1 1-.25c1.1.35 2.3.54 3.6.54a1 1 0 0 1 1 1V20a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h1.4a1 1 0 0 1 1 1c0 1.3.19 2.5.54 3.6a1 1 0 0 1-.25 1l-2.1 2.1z"/></symbol>
+      <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 6.25 7 13 7 13s7-6.75 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 0 4.98 8.5 2.5 2.5 0 0 0 4.98 3.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6v8h-4v-7.1c0-1.7 0-3.9-2.4-3.9-2.4 0-2.8 1.9-2.8 3.8V21H9z"/></symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.6.1-.6.1-.6 1.1.1 1.7 1.2 1.7 1.2 1 .1 1.6.9 1.6.9.9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.8-1.4-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.4-2.3 1-3.1-.1-.3-.4-1.6.1-3.3 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5.2 0c2-1.3 2.8-1 2.8-1 .5 1.7.2 3 .1 3.3.6.8 1 1.9 1 3.1 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="M8.7 17.3L3.4 12l5.3-5.3L7 5.4 1.1 11.3 7 17.2l1.7-1.9zM15.3 6.7L20.6 12l-5.3 5.3L17 18.6 22.9 12.7 17 6.8l-1.7 1.9z"/></symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M20 5h-3.2l-1.4-2H8.6L7.2 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zM12 17a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></symbol>
+      <symbol id="icon-terminal" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm5 6l3 3-3 3V9zm8 6h-6v2h6v-2z"/></symbol>
+      <symbol id="icon-gamepad" viewBox="0 0 24 24"><path d="M6 11a2 2 0 0 0 0 4h1v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1a2 2 0 0 0 0-4H6zM9 12v2H8v-2h1zm4 0v2h-1v-2h1z"/></symbol>
+    </svg>
+
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
@@ -19,7 +32,7 @@
         </div>
         <nav class="nav">
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
+          <a href="projects.html">Projects</a>
           <a href="#experience">Experience</a>
           <a href="resume.html" class="cta">Resume</a>
         </nav>
@@ -40,11 +53,11 @@
             </div>
             <div class="contact-card">
               <ul class="contact-list">
-                <li>📍 Mohrsville, PA</li>
-                <li>📞 484-507-6217</li>
-                <li>✉️ <a href="mailto:micahnotscottish@gmail.com">micahnotscottish@gmail.com</a></li>
-                <li>🔗 <a href="https://linkedin.com/in/micahnotscottish">linkedin.com/in/micahnotscottish</a></li>
-                <li>💻 <a href="https://micahnotscottish.github.io/portfolio">micahnotscottish.github.io/portfolio</a></li>
+                <li class="icon"><svg width="16" height="16"><use xlink:href="#icon-location"></use></svg> Mohrsville, PA</li>
+                <li class="icon"><svg width="16" height="16"><use xlink:href="#icon-phone"></use></svg> <button class="copy" data-copy="484-507-6217">484-507-6217</button></li>
+                <li class="icon"><svg width="16" height="16"><use xlink:href="#icon-mail"></use></svg> <button class="copy" data-copy="micahnotscottish@gmail.com">micahnotscottish@gmail.com</button></li>
+                <li class="icon"><svg width="16" height="16"><use xlink:href="#icon-linkedin"></use></svg> <a class="link" href="https://linkedin.com/in/micahnotscottish">linkedin.com/in/micahnotscottish</a></li>
+                <li class="icon"><svg width="16" height="16"><use xlink:href="#icon-github"></use></svg> <a class="link" href="https://micahnotscottish.github.io/portfolio">micahnotscottish.github.io/portfolio</a></li>
               </ul>
             </div>
           </div>
@@ -71,41 +84,6 @@
         </div>
       </section>
 
-      <section id="projects" class="container section">
-        <h3>Projects</h3>
-        <div class="cards">
-          <article class="card">
-            <h4>Logisim Computer (6502)</h4>
-            <p>Designed and simulated a custom 8-bit CPU architecture using electrical, logic gates, registers</p>
-            <p>Built a compatible 6502 based assembler an disassembler for low-level instruction encoding</p>
-            <p>Designed machine level programs to perform tasks under extreme architectural constraints</p>
-            <p class="meta">2025 • Machine Language, 6502 Assembly</p>
-          </article>
-
-          <article class="card">
-            <h4>Image Detection (OpenCV)</h4>
-            <p>Built a visual detection program using OpenCV to interact with game elements at 95% accuracy</p>
-            <p>Integrated Windows API calls for raw mouse and keyboard input control</p>
-            <p>Demonstrated real-time feedback and adaptive gameplay based on image recognition</p>
-            <p class="meta">2025 • Python + OpenCV</p>
-          </article>
-
-          <article class="card">
-            <h4>Bash Shell Extension</h4>
-            <p>Created a Bash shell extension that executes arbitrary commands after each user input</p>
-            <p>Implemented self-modifying code and filesystem evasion techniques to resist deletion</p>
-            <p class="meta">2024 • Ubuntu Linux, Bash</p>
-          </article>
-
-          <article class="card">
-            <h4>Unreal Engine 5 Games</h4>
-            <p>Developed several 3d multiplayer video games supporting local and online co-op</p>
-            <p>Published 2 separate titles to Steam and itch.io with integrated marketing and deployment pipelines</p>
-            <p class="meta">2022–2024 • Unreal Engine 5 (C++)</p>
-          </article>
-        </div>
-      </section>
-
       <section id="experience" class="container section">
         <h3>Experience</h3>
         <div class="timeline">
@@ -119,6 +97,7 @@
               <li>Revised and updated 30+ projects in an active development environment to maximize data quality</li>
               <li>Debugged and resolved issues with 25+ projects and data sets as they arose</li>
             </ul>
+            <!-- job-summary removed as requested -->
           </div>
 
           <div class="timeline-item">
@@ -131,9 +110,58 @@
               <li>Evaluated AI-generated code diffs involving large scale repositories for accuracy and compatibility</li>
               <li>Engineered 100+ prompts to drive AI models to failure to be documented and corrected</li>
             </ul>
+            <!-- job-summary removed as requested -->
           </div>
         </div>
       </section>
+
+      <section id="projects" class="container section">
+        <h3>Projects</h3>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="pill">Systems</div>
+            <h4>Logisim Computer (6502)</h4>
+            <ul class="proj-bullets">
+              <li>Designed and simulated a custom 8-bit CPU architecture using electrical logic gates and registers</li>
+              <li>Built a compatible 6502-based assembler and disassembler for low-level instruction encoding</li>
+              <li>Designed machine level programs to perform tasks under extreme architectural constraints</li>
+            </ul>
+            <p class="meta">2025 • Machine Language, 6502 Assembly</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="pill">Computer Vision</div>
+            <h4>Image Detection (OpenCV)</h4>
+            <ul class="proj-bullets">
+              <li>Built a visual detection program using OpenCV to interact with game elements at 95% accuracy</li>
+              <li>Integrated Windows API calls for raw mouse and keyboard input control</li>
+              <li>Demonstrated real-time feedback and adaptive gameplay based on image recognition</li>
+            </ul>
+            <p class="meta">2025 • Python + OpenCV</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="pill">Linux</div>
+            <h4>Bash Shell Extension</h4>
+            <ul class="proj-bullets">
+              <li>Created a Bash shell extension that executes arbitrary commands after each user input</li>
+              <li>Implemented self-modifying code and filesystem evasion techniques to resist deletion</li>
+            </ul>
+            <p class="meta">2024 • Ubuntu Linux, Bash</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="pill">Game Dev</div>
+            <h4>Unreal Engine 5 Games</h4>
+            <ul class="proj-bullets">
+              <li>Developed several 3D multiplayer video games supporting local and online co-op</li>
+              <li>Published 2 separate titles to Steam and itch.io with integrated marketing and deployment pipelines</li>
+            </ul>
+            <p class="meta">2022–2024 • Unreal Engine 5 (C++)</p>
+          </article>
+        </div>
+      </section>
+      <!-- duplicate experience removed (kept only the primary Experience section above) -->
     </main>
 
     <footer class="site-footer">
