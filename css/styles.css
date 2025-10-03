@@ -1,10 +1,10 @@
 :root{
-  --bg:#0b0f12; /* near-black */
-  --panel:#071018; /* deep panel */
+  --bg:#424242; /* near-black */
+  --panel:#383838; /* deep panel */
   --muted:#98a0a6; /* soft gray for text */
   --accent:#ff7a2e; /* darker, richer orange */
   --accent-2:#ff7a2e; /* same orange for consistency */
-  --glass: rgba(255,255,255,0.02);
+  --glass: rgb(255, 0, 0);
   --max-width:1100px;
   --radius:12px;
   --mono: 'Segoe UI Mono', 'Courier New', monospace;
@@ -21,10 +21,10 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
 .section{border-top:1px solid rgba(16,24,32,0.04);padding-top:28px;margin-top:28px}
 
 /* Header */
-.site-header{background:rgba(7,16,24,0.92);position:sticky;top:0;z-index:80;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,0.6);padding:10px 0}
+.site-header{background: var(--panel); position:sticky;top:0;z-index:80;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 4px 18px  var(--panel);padding:10px 0}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;gap:12px;align-items:center}
-.avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ffc092);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b0f12;box-shadow:0 8px 30px rgba(255,155,102,0.06)}
+.avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ffc092);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b0f12;box-shadow:0 8px 30px  var(--panel)}
 .brand h1{margin:0;font-size:18px}
 .muted{color:var(--muted);margin:0}
 .nav a{color:var(--muted);text-decoration:none;margin-left:18px}
@@ -34,14 +34,14 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
 .hero{padding:48px 0}
 .hero-grid{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
 .lead{color:var(--muted);font-size:18px}
-.contact-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border-left:6px solid var(--accent);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+.contact-card{background:linear-gradient(180deg, var(--panel), transparent);padding:18px;border-radius:12px;border-left:6px solid var(--accent);box-shadow:0 6px 30px var(--panel)}
 .contact-list{list-style:none;padding:0;margin:0;color:var(--muted)}
 .contact-list a{color:var(--accent);text-decoration:none}
 /* copy buttons (phone/email) should appear like links and use accent color */
 .contact-list button.copy{background:transparent;border:none;padding:0;color:var(--accent);font:inherit;cursor:pointer;text-decoration:underline}
 .contact-list button.copy:hover{filter:brightness(1.06)}
-.btn{background:var(--accent);color:#0b0f12;display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 12px 30px rgba(255,107,0,0.06)}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.btn{background:var(--accent);color:#0b0f12;display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 12px 30px  var(--panel)}
+.btn.ghost{background:transparent;border:1px solid  var(--panel);color:var(--muted)}
 
 /* highlight pill */
 .pill{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#0b0f12;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
@@ -49,14 +49,14 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
 /* card stripe */
 .card{position:relative;overflow:hidden;transition:transform .28s ease,box-shadow .28s ease}
 .card:before{content:'';position:absolute;left:0;top:0;height:6px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));display:block}
-.card:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,0.6)}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 48px  var(--panel)}
 .actions{margin-top:18px}
 
 /* Sections */
 .section{padding:36px 0}
 .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
-.card{background:linear-gradient(180deg,#071018,#081520);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.card{background:linear-gradient(180deg,  var(--panel), var(--panel));padding:16px;border-radius:10px;border:1px solid var(--panel)}
 .meta{color:var(--muted);font-size:13px}
 .card h4{margin-top:6px}
 .card p{margin:6px 0}
@@ -68,8 +68,8 @@ html{scroll-padding-top:92px}
   font-size:1.05rem;
 }
 /* editable job summary under each experience item */
-.job-summary{margin-top:12px;padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02);color:var(--text)}
-.job-summary[contenteditable="true"]{outline:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.02)}
+.job-summary{margin-top:12px;padding:12px;border-radius:8px;background:linear-gradient(180deg, var(--panel),transparent);border:1px solid  var(--panel);color:var(--text)}
+.job-summary[contenteditable="true"]{outline:none;box-shadow:inset 0 0 0 1px  var(--panel)}
 
 /* placeholder styling for empty editable summaries */
 .job-summary:empty:before{content:attr(data-placeholder);color:rgba(255,255,255,0.28);font-style:italic}
@@ -91,10 +91,10 @@ html{scroll-padding-top:92px}
 .project-form{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:12px}
 .project-form .controls{display:flex;flex-direction:column;gap:8px}
 .project-previews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
-.project-card{background:linear-gradient(180deg,#071018,#081520);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.project-card{background:linear-gradient(180deg,#071018,#081520);padding:12px;border-radius:10px;border:1px solid  var(--panel)}
 
 /* projects page: distinct sections */
-.project-detail{margin-top:20px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#061016,#07141b);border:1px solid rgba(255,255,255,0.03);display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
+.project-detail{margin-top:20px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#061016,#07141b);border:1px solid  var(--panel);display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
 .project-detail + .project-detail{margin-top:28px}
 .project-detail h4{grid-column:1/-1;margin:0 0 10px 0}
 .project-detail h4{margin-top:0}
@@ -115,11 +115,11 @@ a:not(.btn):not(.cta):hover{filter:brightness(1.08)}
 .timeline-item:after{content:'';position:absolute;left:0;top:18px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 22px rgba(255,107,0,0.12)}
 
 /* meta pill in cards */
-.meta-pill{display:inline-block;background:rgba(255,255,255,0.03);color:var(--muted);padding:6px 8px;border-radius:999px;font-size:12px;margin-top:8px}
+.meta-pill{display:inline-block;background: var(--panel);color:var(--muted);padding:6px 8px;border-radius:999px;font-size:12px;margin-top:8px}
 
 /* Timeline */
 .timeline{display:flex;flex-direction:column;gap:18px}
-.timeline-item{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:10px}
+.timeline-item{background:linear-gradient(180deg, var(--panel),transparent);padding:16px;border-radius:10px}
 .timeline-item .date{display:block;color:var(--muted);margin-top:6px}
 
 /* Footer */
