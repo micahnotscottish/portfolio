@@ -15,7 +15,7 @@ html,body{height:100%}
 .body-normal{background:var(--bg)}
 .body-normal{background:var(--bg)}
 body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;background:var(--bg);color:var(--text);line-height:1.5}
-.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px;}
 
 /* improve section separation */
 .section{border-top:1px solid rgba(16,24,32,0.04);padding-top:28px;margin-top:28px}
@@ -28,12 +28,15 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
   width: 50px;
   height: 50px;
   display: inline-block;
+}
 
+#about {
+  background:linear-gradient(180deg, var(--panel),transparent);padding:16px;border-radius:10px; border-top:6px solid var(--accent); box-shadow: 0 4px 18px black;
 }
 
 
 .avatar1{width:56px;height:56px;border-radius:10px;background-image: url("logo.svg");background-size: cover; display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b0f12;box-shadow:0 8px 30px  var(--panel)}
-.brand h1{margin:0;font-size:18px}
+.brand h1{margin:0;font-size:22px; text-shadow: 3px 3px 2px black}
 .muted{color:var(--muted);margin:0}
 .nav a{text-decoration:none;margin-left:18px}
 .nav .cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;margin-left:18px}
@@ -42,7 +45,7 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
 .hero{padding:48px 0}
 .hero-grid{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
 .lead{color:var(--text);font-size:18px}
-.contact-card{background:linear-gradient(180deg, var(--panel), transparent);padding:18px;border-radius:12px;border-left:6px solid var(--accent);box-shadow:0 6px 30px var(--panel)}
+.contact-card{background:linear-gradient(180deg, var(--panel), transparent);padding:18px;border-radius:12px;border-left:6px solid var(--accent);box-shadow:0 6px 30px black}
 .contact-list{list-style:none;padding:0;margin:0;color:var(--muted)}
 .contact-list a{color:var(--accent);text-decoration:none}
 /* copy buttons (phone/email) should appear like links and use accent color */
@@ -54,6 +57,7 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
   display: inline-block;
   padding: 10px 16px;
   border-radius: 10px;
+  margin-right: 20px;
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 12px 30px black;
@@ -92,7 +96,7 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
 /* card stripe */
 .card{position:relative;overflow:hidden;transition:transform .28s ease,box-shadow .28s ease}
 .card:before{content:'';position:absolute;left:0;top:0;height:6px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));display:block}
-.card:hover{transform:translateY(-6px);box-shadow:0 22px 48px  var(--panel)}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 48px  black}
 .actions{margin-top:18px}
 
 /* Sections */
@@ -134,10 +138,10 @@ html{scroll-padding-top:92px}
 .project-form{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:12px}
 .project-form .controls{display:flex;flex-direction:column;gap:8px}
 .project-previews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
-.project-card{background:linear-gradient(180deg,var(--bg),var(--bg));padding:12px;border-radius:10px;border:1px solid  var(--panel)}
+.project-card{background:linear-gradient(180deg,var(--bg),var(--bg));padding:12px; margin-bottom: 15px; box-shadow: 0 4px 18px black; border-radius:10px;border-left: 5px solid  var(--accent);}
 
 /* projects page: distinct sections */
-.project-detail{margin-top:20px;padding:18px;border-radius:12px;background:linear-gradient(180deg,var(--panel),var(--panel));border:1px solid  var(--panel);display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
+.project-detail{margin-top:20px;padding:18px;border-radius:12px;background:linear-gradient(180deg,var(--panel),var(--panel));border-bottom:5px solid  var(--accent); box-shadow: 0 4px 18px black; display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
 .project-detail + .project-detail{margin-top:28px}
 .project-detail h4{grid-column:1/-1;margin:0 0 10px 0}
 .project-detail h4{margin-top:0}
@@ -150,15 +154,14 @@ html{scroll-padding-top:92px}
 .projects-intro{color:var(--muted);margin-bottom:12px}
 
 /* timeline marker */
-.timeline-item{position:relative;padding-left:18px}
-.timeline-item:after{content:'';position:absolute;left:0;top:18px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 22px rgba(255,107,0,0.12)}
+.timeline-item{position:relative;padding-left:18px;box-shadow: 0 0 22px black;}
 
 /* meta pill in cards */
 .meta-pill{display:inline-block;background: var(--panel);color:var(--muted);padding:6px 8px;border-radius:999px;font-size:12px;margin-top:8px}
 
 /* Timeline */
 .timeline{display:flex;flex-direction:column;gap:18px}
-.timeline-item{background:linear-gradient(180deg, var(--panel),transparent);padding:16px;border-radius:10px}
+.timeline-item{background:linear-gradient(180deg, var(--panel),transparent);padding:16px;border-radius:10px; border-left:6px solid var(--accent)}
 .timeline-item .date{display:block;color:var(--muted);margin-top:6px}
 
 /* Footer */
