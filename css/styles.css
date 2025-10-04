@@ -24,23 +24,66 @@ body{margin:0;font-family:Inter,Segoe UI,system-ui,Segoe UI Emoji,Arial;backgrou
 .site-header{background: var(--panel); position:sticky;top:0;z-index:80;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 4px 18px  var(--panel);padding:10px 0}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;gap:12px;align-items:center}
-.avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ffc092);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b0f12;box-shadow:0 8px 30px  var(--panel)}
+.avatar {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+
+}
+
+
+.avatar1{width:56px;height:56px;border-radius:10px;background-image: url("logo.svg");background-size: cover; display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b0f12;box-shadow:0 8px 30px  var(--panel)}
 .brand h1{margin:0;font-size:18px}
 .muted{color:var(--muted);margin:0}
-.nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.nav a{text-decoration:none;margin-left:18px}
 .nav .cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;margin-left:18px}
 
 /* Hero */
 .hero{padding:48px 0}
 .hero-grid{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
-.lead{color:var(--muted);font-size:18px}
+.lead{color:var(--text);font-size:18px}
 .contact-card{background:linear-gradient(180deg, var(--panel), transparent);padding:18px;border-radius:12px;border-left:6px solid var(--accent);box-shadow:0 6px 30px var(--panel)}
 .contact-list{list-style:none;padding:0;margin:0;color:var(--muted)}
 .contact-list a{color:var(--accent);text-decoration:none}
 /* copy buttons (phone/email) should appear like links and use accent color */
 .contact-list button.copy{background:transparent;border:none;padding:0;color:var(--accent);font:inherit;cursor:pointer;text-decoration:underline}
 .contact-list button.copy:hover{filter:brightness(1.06)}
-.btn{background:var(--accent);color:#0b0f12;display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 12px 30px  var(--panel)}
+.btn {
+  background: var(--accent);
+  color: var(--panel);
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 12px 30px black;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px black;
+}
+
+.btnhead{
+  background: var(--accent);
+  color: var(--text);
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 12px 30px black;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.btnhead:hover {
+  color: var(--panel);
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px black;
+}
+
 .btn.ghost{background:transparent;border:1px solid  var(--panel);color:var(--muted)}
 
 /* highlight pill */
@@ -106,10 +149,6 @@ html{scroll-padding-top:92px}
 .projects-main-title{font-size:34px;margin-bottom:6px;color:var(--accent)}
 .projects-intro{color:var(--muted);margin-bottom:12px}
 
-/* ensure all ordinary anchors (not buttons/CTA) use the accent consistently */
-a:not(.btn):not(.cta){color:var(--accent);text-decoration:underline}
-a:not(.btn):not(.cta):hover{filter:brightness(1.08)}
-
 /* timeline marker */
 .timeline-item{position:relative;padding-left:18px}
 .timeline-item:after{content:'';position:absolute;left:0;top:18px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 22px rgba(255,107,0,0.12)}
@@ -126,7 +165,7 @@ a:not(.btn):not(.cta):hover{filter:brightness(1.08)}
 .site-footer{padding:24px 0;color:var(--muted)}
 
 /* Resume specific */
-.resume .resume-sheet{background:linear-gradient(180deg,#071018,#071018);padding:28px;border-radius:12px;color:var(--text);border-left:6px solid var(--accent);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+.resume .resume-sheet{background:linear-gradient(180deg,var(--panel),var(--bg));padding:28px;border-radius:12px;color:var(--text);border-left:6px solid var(--accent);box-shadow:0 12px 40px black}
 .resume-header{margin-bottom:22px}
 .contact-inline .contact-text{color:var(--accent)}
 .pdf-controls{margin-top:28px;display:flex;gap:10px}
@@ -158,7 +197,7 @@ a:not(.btn):not(.cta):hover{filter:brightness(1.08)}
 /* PDF viewer */
 .pdf-section{margin-bottom:18px}
 .pdf-controls{display:flex;gap:10px;align-items:center;margin-bottom:12px}
-.pdf-wrap{background:var(--panel);padding:12px;border-radius:8px;border:1px solid rgba(16,24,32,0.06);box-shadow:0 6px 18px rgba(16,24,32,0.04);overflow:hidden}
+.pdf-wrap{background:var(--bg);padding:12px;border-radius:8px;border:1px solid var(--accent);box-shadow:0 6px 18px black;overflow:hidden}
 .pdf-wrap embed{border-radius:6px;display:block}
 .resume-sheet{max-width:900px;margin:28px auto}
 .pdf-controls .btn{padding:8px 12px}
