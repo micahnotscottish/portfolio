@@ -174,7 +174,7 @@ html{scroll-padding-top:92px}
 .pdf-controls{margin-top:28px;display:flex;gap:10px}
 .pdf-wrap .muted a{color:var(--accent)}
 .resume-header{display:flex;flex-direction:column;gap:8px}
-.contact-inline span{margin-right:12px;color:var(--muted)}
+.contact-inline span{color:var(--muted)}
 .links-inline a{color:var(--accent)}
 .print-actions{display:flex;gap:12px;margin-top:18px}
 
