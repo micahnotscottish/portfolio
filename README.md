@@ -1,6 +1,7 @@
 # Portfolio Website — Micah Scott
 
 This is a portfolio website that I hand coded to showcase my projects and experience.
+It is hosted on github pages and can be accessed at [micahnotscottish.github.io/portfolio](https://micahnotscottish.github.io/portfolio)
 
 Files:
 
